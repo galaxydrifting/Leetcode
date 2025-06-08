@@ -2,6 +2,7 @@
 
 ## 題目描述
 > Given two strings s and t, return true if t is an anagram of s, and false otherwise.
+> 
 > 給定兩個字串 s 和 t，若 t 為 s 的字母重組（anagram），則回傳 true，否則回傳 false。
 
 ## 解題思路
