@@ -29,14 +29,3 @@ def containsDuplicate(nums):
 #         seen.add(num)
 #     return False
 ```
-
-## 資料夾結構建議
-
-```
-leetcode/
-  ├── 0217-contains-duplicate/
-  │     ├── README.md      # 題目描述、解題思路、演算法分析、程式碼
-  │     ├── solution.py    # Python 解答（主要）
-  │     └── solution.js    # 其他語言解答（選填）
-  └── ...
-```

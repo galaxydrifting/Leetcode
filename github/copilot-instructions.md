@@ -41,8 +41,7 @@ applyTo: "**"
 leetcode/
   ├── 0001-two-sum/
   │     ├── README.md      # 題目描述、解題思路、演算法分析、程式碼
-  │     ├── solution.py    # Python 解答（主要）
-  │     └── solution.js    # 其他語言解答（選填）
+  │     ├── solution.py    # Python 解答（主要
   ├── 0002-add-two-numbers/
   │     └── ...
   └── ...
