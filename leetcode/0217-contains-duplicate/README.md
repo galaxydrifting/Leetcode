@@ -1,6 +1,7 @@
 # 217. Contains Duplicate
 
 ## 題目描述
+> Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
 > 給定一個整數陣列 nums，若陣列中有任何數值至少出現兩次，則回傳 true；若每個元素皆不相同，則回傳 false。
 
 ## 解題思路
