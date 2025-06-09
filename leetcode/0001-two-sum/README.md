@@ -1,5 +1,7 @@
 # 1. Two Sum
 
+> 題型：Array & Hashing
+
 > 難度：Easy 🟢
 
 ## 題目描述
