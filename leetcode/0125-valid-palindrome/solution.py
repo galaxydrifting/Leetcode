@@ -16,3 +16,26 @@ class Solution:
     # def isPalindrome(self, s: str) -> bool:
     #     filtered = [c.lower() for c in s if c.isalnum()]
     #     return filtered == filtered[::-1]
+
+
+if __name__ == "__main__":
+    # 測試案例：只含非英數字元，left 會一直加到 right
+    s = "!!"
+    sol = Solution()
+    print(sol.isPalindrome(s))  # 預期 True
+
+    # 測試案例：left 跳過非英數字元後等於 right
+    s = "a@"
+    print(sol.isPalindrome(s))  # 預期 True
+
+    # 測試案例：left 跳過後大於 right
+    s = "@#"
+    print(sol.isPalindrome(s))  # 預期 True
+
+    # 一般回文
+    s = "A man, a plan, a canal: Panama"
+    print(sol.isPalindrome(s))  # 預期 True
+
+    # 非回文
+    s = "race a car"
+    print(sol.isPalindrome(s))  # 預期 False
