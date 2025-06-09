@@ -1,5 +1,7 @@
 # 242. Valid Anagram
 
+> 難度：Easy 🟢
+
 ## 題目描述
 > Given two strings s and t, return true if t is an anagram of s, and false otherwise.
 > 

@@ -1,5 +1,7 @@
 # 217. Contains Duplicate
 
+> 難度：Easy 🟢
+
 ## 題目描述
 > Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
 > 
