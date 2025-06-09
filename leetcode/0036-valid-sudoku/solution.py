@@ -11,9 +11,9 @@ class Solution:
                 num = board[i][j]
                 if num == '.':
                     continue
-                if num in rows[i] or num in cols[j] or num in boxes[(i//3)*3 + j//3]:
+                if num in rows[i] or num in cols[j] or num in boxes[(i//3, j//3)]:
                     return False
                 rows[i].add(num)
                 cols[j].add(num)
-                boxes[(i//3)*3 + j//3].add(num)
+                boxes[(i//3, j//3)].add(num)
         return True
