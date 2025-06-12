@@ -68,3 +68,46 @@ def search(nums, target):
             right = mid - 1  # 移動右指標到 mid 左邊
     return -1  # 若未找到目標值，回傳 -1
 ```
+
+## ⚠️ Java 實作時的 Overflow 注意事項
+
+在 Java 中，若直接使用 `mid = (left + right) / 2`，當 `left` 和 `right` 都很大時，`left + right` 可能會超過 int 的最大值，導致 overflow。
+
+**正確寫法：**
+```java
+int mid = left + (right - left) / 2;
+```
+這樣可以避免 overflow，因為 `right - left` 不會超過 int 範圍。
+
+**錯誤寫法（可能 overflow）：**
+```java
+int mid = (left + right) / 2;
+```
+
+---
+
+### C# 也有 Overflow 的可能嗎？
+
+是的，C# 的 `int` 也是 32 位元，若直接寫 `int mid = (left + right) / 2;`，當 `left` 和 `right` 都很大時，`left + right` 也可能溢位。
+
+**正確寫法：**
+```csharp
+int mid = left + (right - left) / 2;
+```
+這樣同樣可以避免 overflow。
+
+---
+
+### 為什麼 `l + (r - l) / 2` 幾乎等價於 `(l + r) // 2`？
+
+兩者數學上等價，因為：
+- `l + (r - l) / 2 = (2l + r - l) / 2 = (l + r) / 2`
+
+**舉例：**
+假設 `l = 10`，`r = 20`：
+- `(l + r) // 2 = (10 + 20) // 2 = 30 // 2 = 15`
+- `l + (r - l) // 2 = 10 + (20 - 10) // 2 = 10 + 10 // 2 = 10 + 5 = 15`
+
+所以兩者結果相同。但當 `l` 和 `r` 很大時，`l + r` 可能溢位，`l + (r - l) / 2` 則不會。
+
+---
