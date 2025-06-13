@@ -1,4 +1,5 @@
 from typing import List
+import math  # 匯入 math 模組以使用 ceil 函式
 
 
 def minEatingSpeed(piles: List[int], h: int) -> int:
@@ -8,7 +9,7 @@ def minEatingSpeed(piles: List[int], h: int) -> int:
         mid = (left + right) // 2  # 取中間速度
         hours = 0  # 初始化總小時數
         for pile in piles:  # 遍歷每一堆香蕉
-            hours += (pile + mid - 1) // mid  # 計算吃完該堆所需小時數，向上取整
+            hours += math.ceil(pile / mid)  # 使用 math.ceil 向上取整計算吃完該堆所需小時數
         if hours <= h:  # 如果總小時數小於等於h
             right = mid  # 嘗試更慢的速度
         else:
