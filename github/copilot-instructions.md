@@ -82,3 +82,4 @@ leetcode/
 - 本 instructions.md 會自動套用於所有檔案與 Copilot Chat 產生的內容。
 - 請嚴格遵循上述規範，確保所有解答具備完整說明與分析，並有活潑、分段明確、易讀的版面。
 - 如有更新，請同步修正本 instructions.md。
+- 新增規範：所有 solution.py 檔案需加上 `if __name__ == "__main__":` 程式進入點與範例測試資料，方便直接執行測試。
