@@ -1,6 +1,7 @@
 # 搜尋旋轉排序陣列
 from typing import List
 
+
 def search(nums: List[int], target: int) -> int:
     left = 0  # 左指標
     right = len(nums) - 1  # 右指標
@@ -21,9 +22,10 @@ def search(nums: List[int], target: int) -> int:
                 right = mid - 1  # 否則搜尋左半邊
     return -1  # 未找到目標
 
+
 if __name__ == "__main__":
     # 範例測試
-    nums1 = [4,5,6,7,0,1,2]
+    nums1 = [4, 5, 6, 7, 0, 1, 2]
     print(search(nums1, 0))  # 輸出: 4
     print(search(nums1, 3))  # 輸出: -1
     nums2 = [1]
