@@ -41,19 +41,3 @@
 | 缺點         | 需額外 O(n) 空間    |
 
 ---
-
-## ⚡ 程式碼實作（Python）
-
-```python
-def containsDuplicate(nums):
-    return len(nums) != len(set(nums))
-
-# 進階寫法：遇到重複即提前回傳
-# def containsDuplicate(nums):
-#     seen = set()
-#     for num in nums:
-#         if num in seen:
-#             return True
-#         seen.add(num)
-#     return False
-```
