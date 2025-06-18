@@ -7,6 +7,8 @@ class ListNode:
 # 判斷連結串列是否有環
 # head: ListNode，連結串列的頭節點
 # 回傳: bool，若有環則回傳 True，否則回傳 False
+
+
 def hasCycle(head):
     # 使用快慢指針法
     slow = head  # 慢指針，每次走一步
@@ -19,6 +21,7 @@ def hasCycle(head):
             return True
     # 快指針遇到 None，表示無環
     return False
+
 
 # 範例測試
 if __name__ == "__main__":
