@@ -29,7 +29,7 @@
 
 | 輸入                | 輸出（DFS）           | 輸出（BFS）           |
 |---------------------|----------------------|----------------------|
-| root = [1,2,3,null,null,4,5] | '1,2,#,#,3,4,#,#,5,#,#' | '1,2,3,#,#,4,5,#,#,#,#' |
+| root = [1,2,3,null,null,4,5] | '1,2,N,N,3,4,N,N,5,N,N' | '1,2,3,N,N,4,5,N,N,N,N' |
 
 ---
 
@@ -135,7 +135,7 @@ class CodecBFS:
                 queue.append(node.left)  # 加入左子樹
                 queue.append(node.right)  # 加入右子樹
             else:
-                res.append('#')  # 空節點
+                res.append('N')  # 空節點以 N 表示
         return ','.join(res)  # 以逗號串接
 
     def deserialize(self, data):
@@ -152,11 +152,11 @@ class CodecBFS:
         i = 1  # 指向下一個值
         while queue:
             node = queue.popleft()  # 取出佇列左端節點
-            if vals[i] != '#':
+            if vals[i] != 'N':
                 node.left = TreeNode(int(vals[i]))  # 建立左子節點
                 queue.append(node.left)  # 加入佇列
             i += 1
-            if vals[i] != '#':
+            if vals[i] != 'N':
                 node.right = TreeNode(int(vals[i]))  # 建立右子節點
                 queue.append(node.right)  # 加入佇列
             i += 1
