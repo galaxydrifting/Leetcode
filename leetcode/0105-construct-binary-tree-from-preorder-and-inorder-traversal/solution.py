@@ -5,6 +5,7 @@ class TreeNode:
         self.left = left  # 左子樹
         self.right = right  # 右子樹
 
+
 class Solution:
     def buildTree(self, preorder, inorder):
         # 建立中序值到索引的映射，加速查找
@@ -22,23 +23,27 @@ class Solution:
             # 左子樹節點數量
             left_size = in_root_idx - in_left
             # 遞迴構建左子樹
-            root.left = helper(pre_left+1, pre_left+left_size, in_left, in_root_idx-1)
+            root.left = helper(pre_left+1, pre_left +
+                               left_size, in_left, in_root_idx-1)
             # 遞迴構建右子樹
-            root.right = helper(pre_left+left_size+1, pre_right, in_root_idx+1, in_right)
+            root.right = helper(pre_left+left_size+1,
+                                pre_right, in_root_idx+1, in_right)
             return root  # 返回根節點
 
         # 從整個區間開始遞迴
         return helper(0, len(preorder)-1, 0, len(inorder)-1)
 
+
 # 範例測試
 if __name__ == "__main__":
-    preorder = [3,9,20,15,7]  # 前序遍歷
-    inorder = [9,3,15,20,7]   # 中序遍歷
+    preorder = [3, 9, 20, 15, 7]  # 前序遍歷
+    inorder = [9, 3, 15, 20, 7]   # 中序遍歷
     sol = Solution()
     root = sol.buildTree(preorder, inorder)  # 構建樹
 
     # 輔助函式：層序遍歷輸出樹結構
     from collections import deque
+
     def print_tree(root):
         if not root:
             print([])
